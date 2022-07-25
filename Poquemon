@@ -24,8 +24,8 @@ console.log(vida);
 
 while(salir<=1){
 
-    var jugador1 = prompt("(Jugador 1): Elija un poquemon (Opcion 0, 1, 2 )");
-    var jugador2 = prompt("(Jugador 2): Elija un poquemon (Opcion 0, 1, 2 )");
+    var jugador1 = prompt(`(Jugador 1): Elija un poquemon (Opcion 0) ${nombre0}, 1) ${nombre1}, 2) ${nombre2} pd="Elija con los numeros" )`);
+    var jugador2 = prompt(`(Jugador 2): Elija un poquemon (Opcion 0) ${nombre0}, 1) ${nombre1}, 2) ${nombre2} pd="Elija con los numeros" )`);
     var jugador11 = parseInt(jugador1);
     var jugador22 = parseInt(jugador2);
 
