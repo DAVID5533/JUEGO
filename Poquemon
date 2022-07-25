@@ -1,0 +1,64 @@
+
+
+var poder=[];
+var vida=[];
+var salir = 1;
+
+var nombre0=prompt("Ingrese el nombre de el poquemon 0");
+var nombre1=prompt("Ingrese el nombre de el poquemon 1");
+var nombre2=prompt("Ingrese el nombre de el poquemon 2");
+
+function resta (a,b){
+    return b - a;
+}
+
+for(var i = 0; i < 3 ; i++){
+    var poder1 = prompt("Ingrese el nivel de el porder del " + i);
+    poder[i]=parseInt(poder1);
+    var vida1 = prompt("Ingrese el nivel de vida del " + i);
+    vida[i]=parseInt(vida1);
+}
+
+console.log(poder);
+console.log(vida);
+
+while(salir<=1){
+
+    var jugador1 = prompt("(Jugador 1): Elija un poquemon (Opcion 0, 1, 2 )");
+    var jugador2 = prompt("(Jugador 2): Elija un poquemon (Opcion 0, 1, 2 )");
+    var jugador11 = parseInt(jugador1);
+    var jugador22 = parseInt(jugador2);
+
+
+    if((jugador11 == 0 && jugador22 == 1) || (jugador11 == 1 && jugador22 == 0)){
+        var resultado = resta(poder[1],vida[0]);
+        var resultado2 = resta(poder[0],vida[1]);
+        alert(`El restante de vida en el enfrentamiento es : poquemon ${nombre0} ${resultado} Puntos de vida y poquemon ${nombre1} ${resultado2} Puntos de vida`);
+    }else if((jugador11 == 0 && jugador22 == 2 ) || (jugador11 == 2  && jugador22 == 0)){
+        var resultado = resta(poder[2],vida[0]);
+        var resultado2 = resta(poder[0],vida[2]);
+        alert(`El restante de vida en el enfrentamiento es : poquemon ${nombre0} ${resultado} Puntos de vida y poquemon ${nombre2} ${resultado2} Puntos de vida`);
+    }else if((jugador11 == 0 && jugador22 == 0) || (jugador11 == 0 && jugador22 == 0)){
+        var resultado = resta(poder[0],vida[0]);
+        var resultado2 = resta(poder[0],vida[0]);
+        alert(`El restante de vida en el enfrentamiento es : poquemon ${nombre0} ${resultado} Puntos de vida y poquemon ${nombre0} ${resultado2} Puntos de vida`);
+    }else if((jugador11 == 2 && jugador22 == 1) || (jugador11 == 1 && jugador22 == 2)){
+        var resultado = resta(poder[1],vida[2]);
+        var resultado2 = resta(poder[2],vida[1]);
+        alert(`El restante de vida en el enfrentamiento es : poquemon ${nombre2} ${resultado} Puntos de vida y poquemon ${nombre1} ${resultado2} Puntos de vida`)
+    }else if((jugador11 == 2 && jugador22 == 2) || (jugador11 == 2 && jugador22 == 2)){
+        var resultado = resta(poder[2],vida[2]);
+        var resultado2 = resta(poder[2],vida[2]);
+        alert(`El restante de vida en el enfrentamiento es : poquemon ${nombre2} ${resultado} Puntos de vida y poquemon ${nombre2} ${resultado2} Puntos de vida`)
+    }else if((jugador11 == 1 && jugador22 == 1) || (jugador11 == 1 && jugador22 == 1)){
+        var resultado = resta(poder[1],vida[1]);
+        var resultado2 = resta(poder[1],vida[1]);
+        alert(`El restante de vida en el enfrentamiento es : poquemon ${nombre1} ${resultado} Puntos de vida y poquemon ${nombre1} ${resultado2} Puntos de vida`)
+    }else {
+        alert("Ingrese valores validos");
+    }
+
+    var salir1 = prompt('Desea reiniciar la partida con los mismos poquemones? 1 (si) 2 (no) pd="Elija con los numeros"');
+    salir = parseInt(salir1);
+
+}
