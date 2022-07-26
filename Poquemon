@@ -1,4 +1,43 @@
 
+/* Codigo corto
+
+var poder=[];
+var vida=[];
+var nombre=[];
+var salir = 1;
+
+function juego (l,k){
+    var resultado = vida[k]-poder[l];
+    var resultado2 = vida[l]-poder[k];
+    alert(`El restante de vida en el enfrentamiento es : poquemon ${nombre[l]} ${resultado} Puntos de vida y poquemon ${nombre[k]} ${resultado2} Puntos de vida`);
+    return resultado,resultado2;
+}
+
+for(var i = 0; i < 3 ; i++){
+    nombre[i] = prompt("Ingrese el nombre de el poquemon " + i);
+    var poder1 = prompt("Ingrese el nivel de el porder del " + i);
+    poder[i]=parseInt(poder1);
+    var vida1 = prompt("Ingrese el nivel de vida del " + i);
+    vida[i]=parseInt(vida1);
+}
+
+while(salir<=1){
+    var jugador1 = prompt(`(Jugador 1): Elija un poquemon (Opcion 0) ${nombre[0]}, 1) ${nombre[1]}, 2) ${nombre[2]} pd="Elija con los numeros" )`);
+    var jugador2 = prompt(`(Jugador 2): Elija un poquemon (Opcion 0) ${nombre[0]}, 1) ${nombre[1]}, 2) ${nombre[2]} pd="Elija con los numeros" )`);
+    var l = parseInt(jugador1);
+    var k = parseInt(jugador2);
+
+    var salir1 = prompt('Desea reiniciar la partida con los mismos poquemones?, Despues de ver el resultado del enfrentamiento 1 (si) 2 (no) pd="Elija con los numeros"');
+    salir = parseInt(salir1);
+
+    juego(l,k);
+}
+
+*/
+---------------------------------------------------------------------
+
+
+/* Codigo largo
 
 var poder=[];
 var vida=[];
@@ -18,9 +57,6 @@ for(var i = 0; i < 3 ; i++){
     var vida1 = prompt("Ingrese el nivel de vida del " + i);
     vida[i]=parseInt(vida1);
 }
-
-console.log(poder);
-console.log(vida);
 
 while(salir<=1){
 
@@ -62,3 +98,5 @@ while(salir<=1){
     salir = parseInt(salir1);
 
 }
+
+*/
